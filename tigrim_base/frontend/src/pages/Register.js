@@ -1,4 +1,5 @@
 import '../styles/Register.css'
+
 function Register() {
   return (
     <div className="Register">
