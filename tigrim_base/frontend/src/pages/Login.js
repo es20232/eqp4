@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../styles/Login.css'
 
 function Login() {
@@ -7,6 +8,7 @@ function Login() {
         <p>
           Login
         </p>
+        <Link to="/Home">Entrar</Link>
       </header>
     </div>
   );

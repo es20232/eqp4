@@ -9,17 +9,16 @@ import Perfil from "./pages/Perfil";
 import Dashboard from "./pages/Dashboard";
 import Layout from "./pages/Layout";
 import NoPage from "./pages/NoPage";
-import App from "./App";
 
-export default function Index() {
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/Home" element={<Layout />}>
+        <Route index element={<Dashboard />} />
           <Route path="Register" element={<Register />} />
           <Route path="Perfil" element={<Perfil />} />
-          <Route path="Dashboard" element={<Dashboard />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
@@ -30,7 +29,7 @@ export default function Index() {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Index />
+    <App />
   </React.StrictMode>
 );
 
