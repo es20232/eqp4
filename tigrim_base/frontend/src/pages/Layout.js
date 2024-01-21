@@ -1,3 +1,4 @@
+// Layout.js
 import { Outlet, Link } from "react-router-dom";
 import '../styles/Layout.css'
 
@@ -7,7 +8,10 @@ const Layout = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/Home/">Home</Link>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/Perfil">Perfil</Link>
           </li>
         </ul>
       </nav>
