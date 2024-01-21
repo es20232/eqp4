@@ -1,14 +1,18 @@
+// Login.js
+import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Login.css'
+import LoginForm from './LoginForm'; // Import the new component
+import '../styles/Login.css';
 
 function Login() {
   return (
     <div className="Login">
       <header className="Login-header">
-        <p>
-          Login
-        </p>
-        <Link to="/Register">Registrar</Link>
+        <p>Login</p>
+        <LoginForm />
+        <div>
+          Don't have an account? <Link to="/Register">Register</Link>
+        </div>
       </header>
     </div>
   );
