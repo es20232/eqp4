@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom';
-import '../styles/Login.css'
+import LoginForm from './LoginForm'; // Import the new component
+import '../styles/Login.css';
+import logo from '../assets/tigrim1.jpg';
 
 function Login() {
   return (
     <div className="Login">
       <header className="Login-header">
-        <p>
-          Login
-        </p>
-        <Link to="/Register">Registrar</Link>
-        <Link to="/Home/">Dashboard</Link>
+        <img src={logo} alt="Logo" style={{ width: '150px', height: 'auto' }} />
+        <p>Login</p>
+        <LoginForm />
+        <div>
+          Não tem uma conta? <Link to="/Register">Registri-se</Link>
+        </div>
       </header>
     </div>
   );

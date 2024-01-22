@@ -1,3 +1,77 @@
-.Login{
-    border: 1px solid black;
-}
+/* Login.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+
+
+  .Login-header {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    text-align: center;
+  }
+  
+  .Login-header p {
+    font-size: 45px; /* Adjust the font size as needed */
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .login-form {
+    
+    text-align: center;
+  }
+ 
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: calc(100% - 12px);
+    padding: 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  .Login-header a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 80px;
+  }
+  
+  .Login-header a:hover {
+    color: #2980b9;
+  }
+  
