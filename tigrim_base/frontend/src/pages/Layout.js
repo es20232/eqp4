@@ -1,23 +1,33 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../styles/Layout.css";
 
-const Layout = () => {
+function Layout() {
+  const navigate = useNavigate();
+
+  const handlePerfil = () => {
+    navigate("/Home/Perfil");
+  };
+
+  const handleDashboard = () => {
+    navigate("/Home");
+  };
+
   return (
     <div className="Home-Bar">
-      <nav className="Home-Options">
-        <ul>
-          <li>
-            <Link to="/Home/">Dashboard</Link>
-          </li>
-          <li>
-            <Link to="/Home/perfil">Perfil</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Outlet />
+      <div className="Home-Options">
+        <button className="Buttom-Dashboard" onClick={handleDashboard}>
+          Dashboard
+        </button>
+        <button className="Buttom-Perfil" onClick={handlePerfil}>
+          Perfil
+        </button>
+      </div>
+      <div className="Home-Content">
+        <Outlet />
+      </div>
     </div>
   );
-};
+}
 
 export default Layout;

@@ -45,7 +45,7 @@ input {
   border-radius: 4px;
 }
 
-button {
+.Buttom-Login {
   width: calc(100% - 12px);
   padding: 12px;
   background-color: #3498db;
@@ -58,7 +58,7 @@ button {
   font-size: 20px;
 }
 
-button:hover {
+.Buttom-Login:hover {
   background-color: #2980b9;
 }
 

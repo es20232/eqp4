@@ -41,7 +41,9 @@ const Login = () => {
             required
           />
 
-          <button onClick={handleLogin}>Login</button>
+          <button className="Buttom-Login" onClick={handleLogin}>
+            Login
+          </button>
         </div>
         <div>
           Não tem uma conta? <Link to="/Register">Registre-se</Link>
