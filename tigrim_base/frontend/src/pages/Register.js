@@ -115,7 +115,9 @@ function Register() {
 
         <div className="button-container">
           <buttonRegister onClick={handleSubmit}>Registrar</buttonRegister>
-          <buttonLogin onClick={handleLogin}>Ja possui uma conta</buttonLogin>
+          <buttonLogin className="Buttom-Return-Login" onClick={handleLogin}>
+            Ja possui uma conta
+          </buttonLogin>
         </div>
       </form>
     </div>

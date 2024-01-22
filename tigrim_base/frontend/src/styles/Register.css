@@ -71,6 +71,10 @@ buttonLogin {
   text-align: center;
 }
 
-button:hover {
+buttonRegister:hover {
   background-color: #2980b9;
+}
+
+.Buttom-Return-Login:hover {
+  color: #2980b9;
 }

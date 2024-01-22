@@ -2,7 +2,17 @@
 import { Outlet, Link } from "react-router-dom";
 import "../styles/Layout.css";
 
-const Layout = () => {
+function Layout() {
+  const navigate = useNavigate();
+
+  const handlePerfil = () => {
+    navigate("/Home/Perfil");
+  };
+
+  const handleDashboard = () => {
+    navigate("/Home");
+  };
+
   return (
     <div className="Home-Bar">
       <nav className="Home-Options">
@@ -19,6 +29,6 @@ const Layout = () => {
       <Outlet />
     </div>
   );
-};
+}
 
 export default Layout;
