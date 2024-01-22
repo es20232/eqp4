@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styles/Register.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../styles/Register.css";
+import logo from "../assets/tigrim1.jpg";
 
 function Register() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    fullName: '',
-    username: '',
-    password: '',
-    confirmPassword: '',
-    email: '',
-    phoneNumber: '',
+    fullName: "",
+    username: "",
+    password: "",
+    confirmPassword: "",
+    email: "",
+    phoneNumber: "",
   });
 
   const handleChange = (e) => {
@@ -24,19 +25,24 @@ function Register() {
     // Pode ser usando fetch() ou axios.
 
     // Exemplo de como você pode lidar com os dados no frontend:
-    console.log('Dados do formulário:', formData);
+    console.log("Dados do formulário:", formData);
   };
 
   const handleLogin = () => {
     // Adicione aqui a lógica para fazer login.
     // Redirecionar para a tela de login ou enviar os dados ao backend, conforme necessário.
-    console.log('Fazer login com os dados:', formData.username, formData.password);
-    navigate('/');
+    console.log(
+      "Fazer login com os dados:",
+      formData.username,
+      formData.password
+    );
+    navigate("/");
   };
 
   return (
     <div className="Register-container">
       <header className="Register-header">
+        <img src={logo} alt="Logo" style={{ width: "150px", height: "auto" }} />
         <h1>Registrar</h1>
       </header>
       <form onSubmit={handleSubmit}>
