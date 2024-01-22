@@ -11,7 +11,7 @@ function Dashboard() {
         <p>
           This is your personalized dashboard. You can add your content here.
         </p>
-        <Link to="/Perfil">
+        <Link to="/Home/Perfil">
           <button className="dashboard-button">Perfil</button>
         </Link>
       </header>

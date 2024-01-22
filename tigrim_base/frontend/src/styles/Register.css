@@ -1,0 +1,76 @@
+a/* Register.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.Register-container {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+input {
+  width: calc(100% - 16px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+buttonRegister {
+  width: calc(90% - 6px); /* Espaçamento entre os botões */
+  padding: 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  text-align: center;
+}
+
+buttonLogin {
+  width: calc(90% - 6px); /* Espaçamento entre os botões */
+  padding: 12px;
+  background-color: #fff;
+  color: #3498db;
+  border: none;
+  border-radius: 35px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
