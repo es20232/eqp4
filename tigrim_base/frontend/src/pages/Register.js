@@ -36,7 +36,7 @@ function Register() {
       formData.username,
       formData.password
     );
-    navigate("/");
+    navigate("/Home");
   };
 
   return (
