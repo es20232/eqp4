@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Register.css';
 
 function Register() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
+    fullName: '',
+    username: '',
     password: '',
     confirmPassword: '',
+    email: '',
     phoneNumber: '',
-    city: '',
-    state: '',
-    country: '',
   });
 
   const handleChange = (e) => {
@@ -28,104 +27,90 @@ function Register() {
     console.log('Dados do formulário:', formData);
   };
 
+  const handleLogin = () => {
+    // Adicione aqui a lógica para fazer login.
+    // Redirecionar para a tela de login ou enviar os dados ao backend, conforme necessário.
+    console.log('Fazer login com os dados:', formData.username, formData.password);
+    navigate('/');
+  };
+
   return (
-    <div className="Register">
+    <div className="Register-container">
       <header className="Register-header">
-        <p>Register</p>
+        <h1>Registrar</h1>
       </header>
       <form onSubmit={handleSubmit}>
         <label>
-          Nome:
+          Nome Completo
           <input
             type="text"
-            name="firstName"
-            value={formData.firstName}
+            name="fullName"
+            value={formData.fullName}
             onChange={handleChange}
+            placeholder="Gabriel Nunes"
             required
           />
         </label>
         <label>
-          Sobrenome:
+          Usuario
           <input
             type="text"
-            name="lastName"
-            value={formData.lastName}
+            name="username"
+            value={formData.username}
             onChange={handleChange}
+            placeholder="GabNunes3"
             required
           />
         </label>
         <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Senha:
+          Senha
           <input
             type="password"
             name="password"
             value={formData.password}
             onChange={handleChange}
+            placeholder="senha123"
             required
           />
         </label>
         <label>
-          Confirmar Senha:
+          Confirmar Senha
           <input
             type="password"
             name="confirmPassword"
             value={formData.confirmPassword}
             onChange={handleChange}
+            placeholder="Repetir a Senha"
             required
           />
         </label>
         <label>
-          Número de Celular:
+          Email
           <input
-            type="tel"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="email@exemplo.com"
+            required
+          />
+        </label>
+        <label>
+          Número de Celular
+          <input
+            type="text"
             name="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
+            placeholder="Somente numeros com o DDD"
             required
           />
         </label>
-        <label>
-          Cidade:
-          <input
-            type="text"
-            name="city"
-            value={formData.city}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Estado:
-          <input
-            type="text"
-            name="state"
-            value={formData.state}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          País:
-          <input
-            type="text"
-            name="country"
-            value={formData.country}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <button type="submit">Registrar</button>
-        <Link to="/Login">Cancelar</Link>
+
+        <div className="button-container">
+          <buttonRegister type="submit">Registrar</buttonRegister>
+          <buttonLogin onClick={handleLogin}>Ja possui uma conta</buttonLogin>
+        </div>
       </form>
     </div>
   );

@@ -9,6 +9,7 @@ function Login() {
           Login
         </p>
         <Link to="/Register">Registrar</Link>
+        <Link to="/Home/">Dashboard</Link>
       </header>
     </div>
   );
