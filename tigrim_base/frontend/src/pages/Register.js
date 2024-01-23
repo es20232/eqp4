@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Register.css";
-import logo from "../assets/tigrim1.jpg";
+import logo from "../assets/tigrim2.png";
 
 function Register() {
   const navigate = useNavigate();
@@ -11,7 +11,7 @@ function Register() {
     password: "",
     confirmPassword: "",
     email: "",
-    phoneNumber: "",
+    dateOfBith: "",
   });
 
   const handleChange = (e) => {
@@ -41,85 +41,91 @@ function Register() {
 
   return (
     <div className="Register-container">
-      <header className="Register-header">
-        <img src={logo} alt="Logo" style={{ width: "150px", height: "auto" }} />
-        <h1>Registrar</h1>
-      </header>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Nome Completo
-          <input
-            type="text"
-            name="fullName"
-            value={formData.fullName}
-            onChange={handleChange}
-            placeholder="Gabriel Nunes"
-            required
+      <div className="Register-header">
+        <header>
+          <img
+            src={logo}
+            alt="Logo"
+            style={{ width: "150px", height: "auto" }}
           />
-        </label>
-        <label>
-          Usuario
-          <input
-            type="text"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-            placeholder="GabNunes3"
-            required
-          />
-        </label>
-        <label>
-          Senha
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            placeholder="senha123"
-            required
-          />
-        </label>
-        <label>
-          Confirmar Senha
-          <input
-            type="password"
-            name="confirmPassword"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            placeholder="Repetir a Senha"
-            required
-          />
-        </label>
-        <label>
-          Email
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="email@exemplo.com"
-            required
-          />
-        </label>
-        <label>
-          Número de Celular
-          <input
-            type="text"
-            name="phoneNumber"
-            value={formData.phoneNumber}
-            onChange={handleChange}
-            placeholder="Somente numeros com o DDD"
-            required
-          />
-        </label>
+          <h1>Registrar</h1>
+        </header>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Nome Completo
+            <input
+              type="text"
+              name="fullName"
+              value={formData.fullName}
+              onChange={handleChange}
+              placeholder="Gabriel Nunes"
+              required
+            />
+          </label>
+          <label>
+            Usuario
+            <input
+              type="text"
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
+              placeholder="GabNunes3"
+              required
+            />
+          </label>
+          <label>
+            Senha
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="senha123"
+              required
+            />
+          </label>
+          <label>
+            Confirmar Senha
+            <input
+              type="password"
+              name="confirmPassword"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              placeholder="Repetir a Senha"
+              required
+            />
+          </label>
+          <label>
+            Email
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="email@exemplo.com"
+              required
+            />
+          </label>
+          <label>
+            Data de Nascimento
+            <input
+              type="text"
+              name="date of bith"
+              value={formData.dateOfBith}
+              onChange={handleChange}
+              placeholder="dd/mm/aaaa"
+              required
+            />
+          </label>
 
-        <div className="button-container">
-          <buttonRegister onClick={handleSubmit}>Registrar</buttonRegister>
-          <buttonLogin className="Buttom-Return-Login" onClick={handleLogin}>
-            Ja possui uma conta
-          </buttonLogin>
-        </div>
-      </form>
+          <div className="button-container">
+            <buttonRegister onClick={handleSubmit}>Registrar</buttonRegister>
+            <buttonLogin className="Buttom-Return-Login" onClick={handleLogin}>
+              Ja possui uma conta
+            </buttonLogin>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

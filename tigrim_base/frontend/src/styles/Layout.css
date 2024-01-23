@@ -4,17 +4,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
 }
 
 .Home-Options {
+  background-color: #212529;
   width: 100vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  border: 1px solid red;
+  margin-bottom: 5rem;
 }
 
-.Home-Content {
-  border: 1px solid blue;
+.Buttom-Homebar {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-right: 0.2rem;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 20%;
+}
+
+.Home-Icon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 50%;
 }

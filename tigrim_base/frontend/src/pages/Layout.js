@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../styles/Layout.css";
+import logo from "../assets/tigrim1.jpg";
 
 function Layout() {
   const navigate = useNavigate();
@@ -16,10 +17,13 @@ function Layout() {
   return (
     <div className="Home-Bar">
       <div className="Home-Options">
-        <button className="Buttom-Dashboard" onClick={handleDashboard}>
-          Dashboard
-        </button>
-        <button className="Buttom-Perfil" onClick={handlePerfil}>
+        <img
+          className="Home-Icon"
+          onClick={handleDashboard}
+          src={logo}
+          alt="Logo"
+        />
+        <button className="Buttom-Homebar" onClick={handlePerfil}>
           Perfil
         </button>
       </div>

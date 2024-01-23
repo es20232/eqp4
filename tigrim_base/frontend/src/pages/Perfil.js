@@ -1,6 +1,5 @@
 // Perfil.js
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/Perfil.css";
 import logo from "../assets/tigrim1.jpg";
 
@@ -13,20 +12,19 @@ function Perfil() {
   };
 
   // Example image data
-  const userImages = [
+  /*const userImages = [
     "https://example.com/image1.jpg",
     "https://example.com/image2.jpg",
     // Add more image URLs as needed
-  ];
+  ];*/
 
   return (
     <div className="Perfil">
       <header className="Perfil-header">
         <img className="Perfil-Photo" src={logo} alt="Logo" />
         <div className="user-info">
-          <h2>{userData.username}</h2>
+          <h1>{userData.username}</h1>
           <p>{userData.bio}</p>
-          {/* Add more user information boxes as needed */}
         </div>
       </header>
     </div>

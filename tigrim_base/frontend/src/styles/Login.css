@@ -1,22 +1,19 @@
 /* Login.css */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+
+.Login {
   display: flex;
+  height: 100vh;
+  width: 100vw;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f4f4f4;
 }
 
 .Login-header {
-  max-width: 400px;
-  width: 100%;
   background-color: #fff;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+  box-shadow: 5px 5px 2.5px #6c757d;
+  border: 1px solid #6c757d;
   text-align: center;
 }
 
@@ -48,7 +45,7 @@ input {
 .Buttom-Login {
   width: calc(100% - 12px);
   padding: 12px;
-  background-color: #3498db;
+  background-color: #343a40;
   color: #fff;
   border: none;
   border-radius: 40px;
@@ -59,16 +56,16 @@ input {
 }
 
 .Buttom-Login:hover {
-  background-color: #2980b9;
+  background-color: #212529;
 }
 
 .Login-header a {
-  color: #3498db;
+  color: #343a40;
   text-decoration: none;
   font-weight: bold;
   margin-left: 80px;
 }
 
 .Login-header a:hover {
-  color: #2980b9;
+  color: #212529;
 }
