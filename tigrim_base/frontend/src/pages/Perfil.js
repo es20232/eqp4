@@ -12,11 +12,11 @@ function Perfil() {
   };
 
   // Example image data
-  /*const userImages = [
-    "https://example.com/image1.jpg",
-    "https://example.com/image2.jpg",
+  const userImages = [
+    "https://midias.correiobraziliense.com.br/_midias/jpg/2023/08/21/1000x1000/1_o_batman_easy_resize_com_-29069579.jpg?20230821092600?20230821092600",
+    "https://i.ytimg.com/vi/uEySwcw7u5A/maxresdefault.jpg",
     // Add more image URLs as needed
-  ];*/
+  ];
 
   return (
     <div className="Perfil">
@@ -25,6 +25,11 @@ function Perfil() {
         <div className="user-info">
           <h1>{userData.username}</h1>
           <p>{userData.bio}</p>
+        </div>
+        <div className="user-images">
+          {userImages.map((imageUrl) => (
+            <img className="user-image" src={imageUrl} alt="User" />
+          ))}
         </div>
       </header>
     </div>

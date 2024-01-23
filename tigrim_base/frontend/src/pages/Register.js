@@ -11,7 +11,7 @@ function Register() {
     password: "",
     confirmPassword: "",
     email: "",
-    dateOfBith: "",
+    dateOfBirth: "",
   });
 
   const handleChange = (e) => {
@@ -21,11 +21,8 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Adicione aqui a lógica para enviar os dados ao backend (Django).
-    // Pode ser usando fetch() ou axios.
-
-    // Exemplo de como você pode lidar com os dados no frontend:
     console.log("Dados do formulário:", formData);
+    // Adicione aqui a lógica para fazer o cadastro.
   };
 
   const handleLogin = () => {
@@ -110,8 +107,8 @@ function Register() {
             Data de Nascimento
             <input
               type="text"
-              name="date of bith"
-              value={formData.dateOfBith}
+              name="dateOfBirth"
+              value={formData.dateOfBirth}
               onChange={handleChange}
               placeholder="dd/mm/aaaa"
               required

@@ -1,17 +1,19 @@
 /* Dashboard.css */
 .Dashboard {
-  box-shadow: 5px 5px 2.5px #6c757d;
-  border: 1px solid #6c757d;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
 }
 
 .Dashboard-header {
-  max-width: 400px;
-  width: 100%;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 2.5px #6c757d;
+  border: 1px solid #6c757d;
   text-align: center;
 }
 
@@ -29,8 +31,4 @@
   text-decoration: none;
   font-weight: bold;
   margin-left: 5px;
-}
-
-.Dashboard-header a:hover {
-  color: #2980b9;
 }
