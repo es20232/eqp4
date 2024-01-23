@@ -21,10 +21,14 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Adicione aqui a lógica para enviar os dados ao backend (Django).
-    // Pode ser usando fetch() ou axios.
+    const jsonData = JSON.stringify(formData);
+    fetch('/api/register', {
 
-    // Exemplo de como você pode lidar com os dados no frontend:
+      method: 'POST', 
+      mode: 'cors', 
+      body: jsonData // body data type must match "Content-Type" header
+
+    })
     console.log("Dados do formulário:", formData);
   };
 
@@ -76,7 +80,7 @@ function Register() {
           <label>
             Senha
             <input
-              type="password"
+              type="text"
               name="password"
               value={formData.password}
               onChange={handleChange}
@@ -87,7 +91,7 @@ function Register() {
           <label>
             Confirmar Senha
             <input
-              type="password"
+              type="text"
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleChange}
@@ -109,8 +113,8 @@ function Register() {
           <label>
             Data de Nascimento
             <input
-              type="text"
-              name="date of bith"
+              type="date"
+              name="dateOfBith"
               value={formData.dateOfBith}
               onChange={handleChange}
               placeholder="dd/mm/aaaa"
@@ -129,5 +133,50 @@ function Register() {
     </div>
   );
 }
+/*
+function Register() {
+
+  var jsonData = {
+    "users": [
+        {
+            "name": "alan", 
+            "age": 23,
+            "username": "aturing"
+        },
+        {
+            "name": "john", 
+            "age": 29,
+            "username": "__john__"
+        }
+    ]
+  }
+
+  function handleClick() {
+    
+    // Send data to the backend via POST
+    fetch('http://------------:8080/', {  // Enter your IP address here
+
+      method: 'POST', 
+      mode: 'cors', 
+      body: JSON.stringify(jsonData) // body data type must match "Content-Type" header
+
+    })
+    
+  }
+
+  return (
+    <div onClick={handleClick} style={{
+      textAlign: 'center',
+      width: '100px',
+      border: '1px solid gray',
+      borderRadius: '5px'
+    }}>
+      Send data to backend
+    </div>
+  );
+
+}
+
+export { Register };*/
 
 export default Register;
