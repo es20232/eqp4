@@ -20,9 +20,12 @@ function Register() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Dados do formulário:", formData);
-    // Adicione aqui a lógica para fazer o cadastro.
+    const jsonData = JSON.stringify(formData);
+    fetch("/api/register", {
+      method: "POST",
+      mode: "cors",
+      body: jsonData, // body data type must match "Content-Type" header
+    });
   };
 
   const handleLogin = () => {
@@ -106,7 +109,7 @@ function Register() {
           <label>
             Data de Nascimento
             <input
-              type="text"
+              type="date"
               name="dateOfBirth"
               value={formData.dateOfBirth}
               onChange={handleChange}
