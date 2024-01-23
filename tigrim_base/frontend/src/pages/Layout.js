@@ -1,6 +1,7 @@
-// Layout.js
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../styles/Layout.css";
+import logo from "../assets/tigrim1.jpg";
 
 function Layout() {
   const navigate = useNavigate();
@@ -15,18 +16,20 @@ function Layout() {
 
   return (
     <div className="Home-Bar">
-      <nav className="Home-Options">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/Perfil">Perfil</Link>
-          </li>
-        </ul>
-      </nav>
-
-      <Outlet />
+      <div className="Home-Options">
+        <img
+          className="Home-Icon"
+          onClick={handleDashboard}
+          src={logo}
+          alt="Logo"
+        />
+        <button className="Buttom-Homebar" onClick={handlePerfil}>
+          Perfil
+        </button>
+      </div>
+      <div className="Home-Content">
+        <Outlet />
+      </div>
     </div>
   );
 }

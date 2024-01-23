@@ -1,63 +1,60 @@
-/* Perfil.css */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-  }
-  
-  .Perfil-header {
-    min-width: 1000px;
-    max-width: 1500px; /* Increase the maximum width for a wider box */
-    width: 100%;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .Perfil-header h2 {
-    margin-bottom: 20px;
-    color: #3498db;
-  }
-  
-  .user-info {
-    margin-bottom: 30px;
-  }
-  
-  .user-info p {
-    color: #555;
-  }
-  
-  .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-  }
-  
-  .image-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .Perfil-header a {
-    display: block;
-    padding: 15px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .Perfil-header a:hover {
-    background-color: #2980b9;
-  }
+.Perfil-header {
+  width: 100%;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+.Perfil-header h2 {
+  margin-bottom: 20px;
+  color: #3498db;
+}
+
+.user-info {
+  margin-bottom: 30px;
+}
+
+.user-info p {
+  color: #555;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.Perfil-header a {
+  display: block;
+  padding: 15px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.Perfil-header a:hover {
+  background-color: #2980b9;
+}
+
+.Perfil-Photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
