@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "react-admin": "^4.16.7",
     "react-scripts": "^5.0.1"
   }
 }
