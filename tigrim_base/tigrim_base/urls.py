@@ -6,6 +6,4 @@ from .views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    re_path('login', views.login),
-    re_path('register', views.login),
 ]

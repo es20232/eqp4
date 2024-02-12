@@ -1,8 +1,7 @@
-import "./App.css";
 import { Outlet } from "react-router-dom";
 
-function MyApp() {
+function App() {
   return <Outlet />;
 }
 
-export default MyApp;
+export default App;
