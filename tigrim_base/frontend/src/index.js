@@ -7,6 +7,7 @@ import Perfil from "./pages/Perfil";
 import Home from "./pages/home";
 import NoPage from "./pages/NoPage";
 import RecuperarSenha from "./pages/RecuperarSenha";
+import NovaSenha from "./pages/NovaSenha";
 import PrivateRoutes from "./utils/PrivateRoutes";
 import {
   createBrowserRouter,
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path:"/RecuperarSenha",
     element:<RecuperarSenha />
+  },
+  {
+    path:"/NovaSenha",
+    element:<NovaSenha />
   },
   {
     path:"/Cadastro",

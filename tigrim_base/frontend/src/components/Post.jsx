@@ -1,4 +1,4 @@
-import { ThumbUpOffAlt, ThumbUpAlt, MoreVert, ThumbDownOffAlt, ThumbDownAlt } from "@mui/icons-material";
+import { ThumbUpOffAlt, ThumbUpAlt, ThumbDownOffAlt, ThumbDownAlt } from "@mui/icons-material";
 import {
   Avatar,
   Card,
@@ -9,15 +9,19 @@ import {
   Checkbox,
   IconButton,
   Typography,
+  TextField,
+  Button,
 } from "@mui/material";
 import React, { useState } from "react";
-
 
 const Post = () => {
   const [likesCount, setLikesCount] = useState(0);
   const [dislikesCount, setDislikesCount] = useState(0);
   const [userLiked, setUserLiked] = useState(false);
   const [userDisliked, setUserDisliked] = useState(false);
+  const [commentText, setCommentText] = useState(""); // Estado para armazenar o texto do comentário
+
+  const [comments, setComments] = useState([]);
 
   const handleLike = () => {
     if (!userLiked) {
@@ -33,14 +37,23 @@ const Post = () => {
     }
   };
 
+  const handleAddComment = () => {
+    if (commentText.trim() !== "") {
+      const newComment = {
+        id: comments.length + 1,
+        author: "John Doe", // Nome do perfil, não manipulável pelo usuário
+        text: commentText,
+      };
+      setComments([...comments, newComment]);
+      setCommentText(""); // Limpar o campo de texto do comentário após adicionar
+      console.log(newComment); // Exibir o comentário no console
+    }
+  };
+
   return (
     <Card sx={{ margin: 5 }}>
       <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
-            R
-          </Avatar>
-        }
+        avatar={<Avatar sx={{ bgcolor: "red" }} aria-label="recipe">R</Avatar>}
         title="John Doe"
         subheader="September 14, 2022"
       />
@@ -79,7 +92,42 @@ const Post = () => {
           {dislikesCount}
         </Typography>
       </CardActions>
-      /*Comentarios*/
+
+      {/* Sessão de Comentários */}
+      <CardContent>
+        <Typography variant="h6" gutterBottom>
+          Comentários
+        </Typography>
+        {comments.map((comment) => (
+          <div key={comment.id}>
+            <Typography variant="subtitle1" color="text.secondary">
+              {comment.author}:
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {comment.text}
+            </Typography>
+            <hr />
+          </div>
+        ))}
+      </CardContent>
+
+      {/* Área de Formulário para Novos Comentários */}
+      <CardContent>
+        <Typography variant="h6" gutterBottom>
+          Adicionar Comentário
+        </Typography>
+        <TextField
+          fullWidth
+          multiline
+          rows={3}
+          label="Seu Comentário"
+          value={commentText}
+          onChange={(e) => setCommentText(e.target.value)}
+        />
+        <Button onClick={handleAddComment} variant="contained" sx={{ mt: 1 }}>
+          Adicionar Comentário
+        </Button>
+      </CardContent>
     </Card>
   );
 };
