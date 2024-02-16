@@ -1,4 +1,4 @@
-import { ThumbUpOffAlt, ThumbUpAlt, MoreVert, ThumbDownOffAlt, ThumbDownAlt } from "@mui/icons-material";
+import { ThumbUpOffAlt, ThumbUpAlt, ThumbDownOffAlt, ThumbDownAlt } from "@mui/icons-material";
 import {
   Avatar,
   Card,
@@ -79,8 +79,8 @@ const Post = () => {
           {dislikesCount}
         </Typography>
       </CardActions>
-      /*Comentarios*/
     </Card>
+    
   );
 };
 

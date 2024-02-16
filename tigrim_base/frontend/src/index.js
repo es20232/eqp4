@@ -1,9 +1,9 @@
-import App from './App';
 import React from 'react';
 import ReactDOM from "react-dom/client";
 import Login from "./pages/SignIn";
 import Cadastro from "./pages/SignUp";
 import Perfil from "./pages/Perfil";
+import EditarPerfil from "./pages/EditarPerfil";
 import Home from "./pages/home";
 import NoPage from "./pages/NoPage";
 import RecuperarSenha from "./pages/RecuperarSenha";
@@ -39,7 +39,11 @@ const router = createBrowserRouter([
       },
       {
         path:"Perfil",
-        element:<Perfil />
+        element: <Perfil />
+      },
+      {
+        path:"EditarPerfil",
+        element: <EditarPerfil />
       }
     ]
   }

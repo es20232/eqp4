@@ -4,7 +4,6 @@ import {
   ButtonGroup,
   Fab,
   Modal,
-  Stack,
   styled,
   TextField,
   Tooltip,
@@ -12,12 +11,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import {
-  Add as AddIcon,
-  DateRange,
-  EmojiEmotions,
-  Image,
-  PersonAdd,
-  VideoCameraBack,
+  Add as AddIcon
 } from "@mui/icons-material";
 import { Box } from "@mui/system";
 
