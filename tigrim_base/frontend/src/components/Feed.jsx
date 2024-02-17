@@ -10,7 +10,7 @@ const Feed = () => {
   }, [3000]);
 
   return (
-    <Box flex={4} p={{ xs: 0, md: 2 }}>
+    <Box flex={8} p={{ xs: 0, md: 2 }}>
       {loading ? (
         <Stack spacing={1}>
           <Skeleton variant="text" height={100} />
