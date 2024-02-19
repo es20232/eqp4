@@ -1,4 +1,4 @@
-import {Pets } from "@mui/icons-material";
+import { Pets } from "@mui/icons-material";
 import {
   AppBar,
   Avatar,
