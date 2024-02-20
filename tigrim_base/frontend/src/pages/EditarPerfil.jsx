@@ -31,7 +31,7 @@ const EditarPerfil = () => {
 
   const handleSubmit = () => {
     // Logica para atualizar os dados do perfil
-    console.log("Profile updated:", { name, email, nick, bio });
+    console.log("Profile updated:", { name, email, nick, bio, profilePicture });
   };
 
   const handleFileChange = (event) => {

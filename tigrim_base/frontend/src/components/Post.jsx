@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 
-
 const Post = () => {
   const [likesCount, setLikesCount] = useState(0);
   const [dislikesCount, setDislikesCount] = useState(0);
@@ -47,7 +46,7 @@ const Post = () => {
       <CardMedia
         component="img"
         height="20%"
-        image="https://images.pexels.com/photos/4534200/pexels-photo-4534200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPfxGIHGzRuxAEa6FuE0bK9bJrLKBDzOE1fA&usqp=CAU"
         alt="Paella dish"
       />
       <CardContent>
