@@ -34,3 +34,16 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     
     def __str__(self):
         return self.email
+
+class postModel(models.Model):
+    author_id = models.ForeignKey(UserAccount, on_delete=models.CASCADE)
+    #id_post = ;
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+    image = models.ImageField(upload_to = "files/id/")
+    descripiton = models.CharField(max_length=200)
+    like = models.IntegerField(default= 0);
+    dislike = models.IntegerField(default= 0);
+   # coments = models.models.BinaryField(models.CharField(max_length=200), blank=True)

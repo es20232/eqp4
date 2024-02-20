@@ -13,9 +13,9 @@ import {
 import React, { useState } from "react";
 
 
-const Post = () => {
-  const [likesCount, setLikesCount] = useState(0);
-  const [dislikesCount, setDislikesCount] = useState(0);
+const Post = ({ post }) => {
+  const [likesCount, setLikesCount] = useState(post.likes);
+  const [dislikesCount, setDislikesCount] = useState(post.deslike);
   const [userLiked, setUserLiked] = useState(false);
   const [userDisliked, setUserDisliked] = useState(false);
 
@@ -47,12 +47,12 @@ const Post = () => {
       <CardMedia
         component="img"
         height="20%"
-        image="https://images.pexels.com/photos/4534200/pexels-photo-4534200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        image={post.image}
         alt="Paella dish"
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Lugar legal, não sei onde é, e nem se existe, achei na internet
+          {post.descripiton}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

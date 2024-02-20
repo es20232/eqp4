@@ -9,6 +9,7 @@ import Activate from './containers/Activate';
 import ResetPassword from './containers/ResetPassword';
 import Perfil from './containers/Perfil';
 import ResetPasswordConfirm from './containers/ResetPasswordConfirm';
+import EditarPerfil from './containers/EditarPerfil';
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -26,6 +27,7 @@ const App = () => (
                     <Route exact path="/signup" component={Signup} />
                     <Route exact path="/reset-password" component={ResetPassword} />
                     <Route exact path="/perfil" component={Perfil} />
+                    <Route exact path="/EditarPerfil" component={EditarPerfil} />
                     <Route exact path="/activate/:uid/:token" component={Activate} />
                     <Route exact path="/password/reset/confirm/:uid/:token" component={ResetPasswordConfirm} />
                 </Switch>

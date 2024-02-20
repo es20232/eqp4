@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-      <Box flex={1} p={5} sx={{ display: { xs: "none", sm: "block" } }}>
+      <Box flex={2} p={5} sx={{ display: { xs: "none", sm: "block" } }}>
           <Box position="fixed">
               <List>
                   <ListItem disablePadding>

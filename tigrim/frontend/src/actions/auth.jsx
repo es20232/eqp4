@@ -92,8 +92,11 @@ export const login = (email, password) => async dispatch => {
 
     const body = JSON.stringify({ email, password });
 
-    try{
+    try {
         const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/jwt/create/`, body, config);
+
+        // Armazena o token no sessionStorage
+        sessionStorage.setItem('token', res.data.access);
 
         dispatch({
             type: LOGIN_SUCCESS,
